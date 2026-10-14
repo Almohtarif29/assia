@@ -1,3 +1,6 @@
+/* =========================================
+   1. Reset & Base
+   ========================================= */
 * {
     margin: 0;
     padding: 0;
@@ -6,23 +9,22 @@
 
 body {
     background-color: #050914;
-    /* K7al mghlo9 b7al lil */
     color: #ffffff;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 
-/* L'background m3a l'glow lkhedar w l'zre9 */
+/* =========================================
+   2. Background & Stars
+   ========================================= */
 #app-container {
     position: relative;
     min-height: 100vh;
-    /* Dwiwat khfaf b l'azraq w lkhedar */
     background: radial-gradient(circle at 15% 50%, rgba(16, 185, 129, 0.15), transparent 50%),
-        radial-gradient(circle at 85% 30%, rgba(0, 242, 254, 0.15), transparent 50%);
+                radial-gradient(circle at 85% 30%, rgba(0, 242, 254, 0.15), transparent 50%);
     z-index: 1;
 }
 
-/* Njimat (Stars) kaytiro f l'background */
 .stars {
     position: fixed;
     top: 0;
@@ -44,16 +46,13 @@ body {
 }
 
 @keyframes twinkle {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-200px);
-    }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-200px); }
 }
 
-/* L'Wejha lewla (Hero Section) */
+/* =========================================
+   3. L'Wejha lewla (Hero Section)
+   ========================================= */
 .hero {
     height: 100vh;
     display: flex;
@@ -69,7 +68,6 @@ body {
 h1 {
     font-family: 'Playfair Display', serif;
     font-size: 4.5rem;
-    /* Loun dyal text mkhale6 bin lkhedar w lazraq */
     background: linear-gradient(to right, #00f2fe, #4facfe, #10b981);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -86,30 +84,18 @@ h1 {
 }
 
 @keyframes fadeInDown {
-    from {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(-30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* CSS dyal Story Section */
+/* =========================================
+   4. Story Section (Kifash Bdat Lqissa)
+   ========================================= */
 .story-section {
     padding: 80px 20px;
     display: flex;
@@ -123,16 +109,13 @@ h1 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5rem;
     color: #10b981;
-    /* Lkhedar li katbghi Assia */
     margin-bottom: 30px;
     text-align: center;
 }
 
 .story-card {
     background: rgba(255, 255, 255, 0.05);
-    /* Khalfiya chfafa */
     backdrop-filter: blur(10px);
-    /* Kayrdha b7al djaj */
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
@@ -156,7 +139,9 @@ h1 {
     font-family: 'Poppins', sans-serif;
 }
 
-/* CSS dyal Gallery */
+/* =========================================
+   5. Gallery & Promises
+   ========================================= */
 .gallery-section,
 .promises-section {
     padding: 60px 20px;
@@ -190,11 +175,9 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Bash tswira tched blasa m9adda blama tt3wej */
     transition: transform 0.4s ease;
 }
 
-/* L'animation mlli kadi souri fo9 tswira */
 .img-box:hover {
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 242, 254, 0.4);
@@ -203,10 +186,8 @@ h1 {
 
 .img-box:hover img {
     transform: scale(1.1);
-    /* Tswira katkber chwiya mn ldakhel */
 }
 
-/* CSS dyal Promise Card (b7al Story Card chwiya) */
 .promise-card {
     border-color: rgba(0, 242, 254, 0.3);
 }
@@ -222,7 +203,9 @@ h1 {
     color: #00f2fe;
 }
 
-/* CSS dyal Countdown */
+/* =========================================
+   6. Countdown
+   ========================================= */
 .countdown-section {
     padding: 60px 20px;
     display: flex;
@@ -262,7 +245,6 @@ h1 {
     font-size: 2.5rem;
     font-weight: 700;
     color: #00f2fe;
-    /* Zre9 kaylme3 */
     font-family: 'Playfair Display', serif;
 }
 
@@ -274,7 +256,9 @@ h1 {
     letter-spacing: 2px;
 }
 
-/* CSS dyal Reasons 3D Flip Cards */
+/* =========================================
+   7. Reasons 3D Flip Cards
+   ========================================= */
 .reasons-section {
     padding: 60px 20px;
     display: flex;
@@ -293,16 +277,13 @@ h1 {
     max-width: 1000px;
 }
 
-/* L'm9yas dyal l'carte w 3D perspective */
 .flip-card {
     background-color: transparent;
     width: 220px;
     height: 250px;
     perspective: 1000px;
-    /* Hada li kay3ti l'effet 3D */
 }
 
-/* L'container li kaydor */
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -312,12 +293,10 @@ h1 {
     transform-style: preserve-3d;
 }
 
-/* Mlli kan7to souri (Hover) */
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
 }
 
-/* L'qodam w lor dyal carte */
 .flip-card-front,
 .flip-card-back {
     position: absolute;
@@ -366,22 +345,9 @@ h1 {
     line-height: 1.6;
 }
 
-/* CSS dyal tswirat 3iniha f Sbab #5 */
-.eyes-img {
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    /* Katrod tswira mdowra */
-    object-fit: cover;
-    /* Bash tswira mat3wajch */
-    margin-bottom: 15px;
-    border: 3px solid rgba(0, 242, 254, 0.8);
-    /* I6ar zwiwn b zre9 */
-    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
-    /* Glow sghir 3la tswira */
-}
-
-/* CSS dyal Section 3iniha bo7dha (Format 9:16) */
+/* =========================================
+   8. Eyes Special Section (3iniha)
+   ========================================= */
 .eyes-special-section {
     padding: 80px 20px;
     display: flex;
@@ -403,9 +369,7 @@ h1 {
 .eyes-portrait {
     width: 100%;
     max-width: 400px;
-    /* L'3erd l'aqsa bash matkhesarch f PC */
     aspect-ratio: 9 / 16;
-    /* Hada hwa sser dyal 9:16 kima bghiti */
     border-radius: 20px;
     overflow: hidden;
     box-shadow: 0 15px 50px rgba(0, 242, 254, 0.4);
@@ -415,7 +379,6 @@ h1 {
 
 .eyes-portrait:hover {
     transform: scale(1.03);
-    /* Katkber chwiya bchwiya mlli t9is'ha */
     box-shadow: 0 20px 60px rgba(16, 185, 129, 0.6);
     border-color: rgba(0, 242, 254, 0.8);
 }
@@ -424,7 +387,6 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    /* Bash tswira t3mer blassa kamla blama tt3wej */
 }
 
 .eyes-message {
@@ -446,13 +408,14 @@ h1 {
     line-height: 1.5;
 }
 
-/* CSS dyal Music Player */
+/* =========================================
+   9. Music Player
+   ========================================= */
 .music-player {
     position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 999;
-    /* Bash tb9a dima lfo9 fo9 kolchi */
 }
 
 .music-btn {
@@ -478,91 +441,130 @@ h1 {
     background: linear-gradient(135deg, #10b981, #00f2fe);
 }
 
-/* L'animation mlli tbda tkhdem l'music (Glow kaynbed) */
 .playing {
     animation: pulse-glow 2s infinite;
 }
 
 @keyframes pulse-glow {
-    0% {
-        box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
-    }
-
-    50% {
-        box-shadow: 0 0 25px rgba(16, 185, 129, 0.9);
-    }
-
-    100% {
-        box-shadow: 0 0 10px rgba(0, 242, 254, 0.5);
-    }
+    0% { box-shadow: 0 0 10px rgba(0, 242, 254, 0.5); }
+    50% { box-shadow: 0 0 25px rgba(16, 185, 129, 0.9); }
+    100% { box-shadow: 0 0 10px rgba(0, 242, 254, 0.5); }
 }
 
 /* =========================================
-   CSS dyal Qlouba mlli tekliqi (Click Magic) 
+   10. Qlouba mlli tekliqi (Click Magic)
    ========================================= */
 .click-heart {
     position: fixed;
     font-size: 24px;
     color: #ff3366;
     pointer-events: none;
-    /* Bash may3re9lch l'clique f site */
     transform: translate(-50%, -50%);
-    /* Bash yji msnter m3a souri */
     animation: floatHeart 1s ease-out forwards;
     z-index: 9999;
     text-shadow: 0 0 10px rgba(255, 51, 102, 0.8);
 }
 
 @keyframes floatHeart {
-    0% {
-        transform: translate(-50%, -50%) scale(0.5);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translate(-50%, -150px) scale(1.5);
-        opacity: 0;
-    }
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+    100% { transform: translate(-50%, -150px) scale(1.5); opacity: 0; }
 }
 
-/* CSS dyal l'karta (Letter) */
+/* =========================================
+   11. Briya (Animated Love Letter) - KAAAMLA
+   ========================================= */
+.letter-section {
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 100px;
+}
+
+/* L'container dyal l'envelope (bra) */
+.envelope-container {
+    width: 300px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+    margin-top: 50px;
+}
+
+/* L'qodam wel lor dyal bra */
+.envelope {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #10b981;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+.envelope-front {
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-bottom: 100px solid #00f2fe;
+    border-radius: 0 0 10px 10px;
+    z-index: 3;
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 100px solid #0ea5e9;
+    transform-origin: top;
+    transition: transform 0.6s ease-in-out;
+    z-index: 4;
+}
+
+/* L'warqa l'bidha li fiha l'message */
 .letter {
     position: absolute;
     top: 10px;
     left: 10px;
     width: 280px;
-    height: 180px; /* Mlli tkoun msdouda tkoun 9d l'bra */
+    height: 180px;
     background: #fdfbf7;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-    /* Zedna height f l'animation bash twal bchwiya */
-    transition: transform 0.6s ease-in-out, height 0.6s ease-in-out; 
+    transition: transform 0.6s ease-in-out, height 0.6s ease-in-out;
     z-index: 2;
-    overflow: hidden; /* HADI LI GHAT7EL L'MOUCHKIL: Katkhbe3 ay ktaba kharja mn t7t */
+    overflow: hidden; /* Fix bash mykhrejch text */
 }
 
 .handwriting {
     font-family: 'Caveat', cursive;
-    font-size: 1.45rem; /* Sgherna font ghir waa7d chwiya bash tji mkakra mzyan */
+    font-size: 1.45rem;
     color: #050914;
     line-height: 1.2;
 }
 
-/* Les animations mlli t'cliqui 3la l'bra (Class 'open') */
+/* Animations mlli kat'cliqui */
 .envelope-container.open .flap {
     transform: rotateX(180deg);
-    z-index: 1; /* Katrje3 lor */
+    z-index: 1;
 }
 
 .envelope-container.open .letter {
-    transform: translateY(-160px); /* Katla3 lfo9 kter bash tban */
-    height: 280px; /* L'warqa katwal bash thez l'message kamel blama ykhrej */
-    z-index: 2; /* 9adina z-index bash l'warqa tbqa dakhla wst l'bra mn t7t b7al l'wa9i3 */
+    transform: translateY(-160px);
+    height: 280px; /* L'warqa katwal */
+    z-index: 2;
 }
 
 /* =========================================
-   CSS dyal Wriqat Lward (Falling Petals) 
+   12. Wriqat Lward (Falling Petals)
    ========================================= */
 #petals-container {
     position: fixed;
@@ -571,16 +573,13 @@ h1 {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    /* Bash may7ebsouch l'clique 3la l'bra wla l'music */
     z-index: 999;
     overflow: hidden;
 }
 
 .petal {
     position: absolute;
-    /* Loun 7mer b7al lward */
     background: linear-gradient(135deg, #ff0033, #ff3366);
-    /* Had l'border-radius kay3tiha forma dyal wriqa */
     border-radius: 15px 0 15px 0;
     opacity: 0.7;
     box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
@@ -592,7 +591,6 @@ h1 {
         top: -10%;
         transform: translateX(0) rotate(0deg);
     }
-
     100% {
         top: 110%;
         transform: translateX(100px) rotate(360deg);
